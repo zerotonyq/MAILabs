@@ -1,0 +1,27 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat > t1.txt
+you know i need you
+but the life is a complex thing
+please stop and don't feed me
+i better disappear in this feeling  
+^C
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ md5sum t1.txt
+9feb9d8fa3faba03eaa03e1582d9c9b7  t1.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ md5sum t1.txt > t1.md5
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ md5sum -c -w t1.md5
+t1.txt: ЦЕЛ
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat >> t1.md5
+modified line
+^C
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ md5sum -c -w t1.md5
+t1.txt: ЦЕЛ
+md5sum: t1.md5: 2: неправильно составленная строка контрольной суммы MD5
+md5sum: ПРЕДУПРЕЖДЕНИЕ: неправильный формат строки 1
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ sed -i '$d' t1.md5
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ md5sum -c -w t1.md5
+t1.txt: ЦЕЛ
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat >> t1.txt
+new line
+^C
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ md5sum -c -w t1.md5
+t1.txt: ПОВРЕЖДЁН
+md5sum: ПРЕДУПРЕЖДЕНИЕ: НЕ совпала 1 вычисленная контрольная сумма

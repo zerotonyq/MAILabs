@@ -1,0 +1,21 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+qwerty
+bob
+sunday is the day with sun
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ grep -i "e" t1.txt
+qwerty
+sunday is the day with sun
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ grep -i -n "e" t1.txt
+1:qwerty
+3:sunday is the day with sun
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ grep -i -n "E" t1.txt
+1:qwerty
+3:sunday is the day with sun
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t2.txt
+qwerty
+bob2
+sundaty is day with moon
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ grep -i -n "E" t1.txt t2.txt
+t1.txt:1:qwerty
+t1.txt:3:sunday is the day with sun
+t2.txt:1:qwerty

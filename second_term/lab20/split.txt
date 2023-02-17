@@ -1,0 +1,68 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ ls
+cmp.txt   filenames.txt  grep.txt   md5sum.txt   sort.txt  t1.txt  tail.txt  uniq.txt
+diff.txt  file.txt       head.txt   newFile.txt  split_t2  t2.txt  tee.txt   wc.txt
+dir1      find.txt       iconv.txt  sed.txt      t1.md5    t3.cpp  tr.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t2.txt
+итого 96
+-rw-rw-r-- 1 anthony anthony  1196 фев 15 23:25 cmp.txt
+-rw-rw-r-- 1 anthony anthony  1164 фев 15 11:48 diff.txt
+drwxrwxr-x 3 anthony anthony  4096 фев 16 00:49 dir1
+-rw-rw-r-- 1 anthony anthony    14 фев 16 15:29 filenames.txt
+-rw-rw-r-- 1 anthony anthony  1115 фев 16 15:31 file.txt
+-rw-rw-r-- 1 anthony anthony   816 фев 16 00:51 find.txt
+-rw-rw-r-- 1 anthony anthony   703 фев 16 00:30 grep.txt
+-rw-rw-r-- 1 anthony anthony   807 фев 15 23:40 head.txt
+-rw-rw-r-- 1 anthony anthony 13618 фев 16 14:53 iconv.txt
+-rw-rw-r-- 1 anthony anthony  1327 фев 16 15:18 md5sum.txt
+-rw-rw-r-- 1 anthony anthony    30 фев 16 02:59 newFile.txt
+-rw-rw-r-- 1 anthony anthony  1212 фев 16 03:05 sed.txt
+-rw-rw-r-- 1 anthony anthony  2167 фев 16 01:02 sort.txt
+-rw-rw-r-- 1 anthony anthony    41 фев 16 15:17 t1.md5
+-rw-rw-r-- 1 anthony anthony   126 фев 16 15:17 t1.txt
+-rw-rw-r-- 1 anthony anthony     0 фев 18 00:49 t2.txt
+-rw-rw-r-- 1 anthony anthony    45 фев 15 11:47 t3.cpp
+-rw-rw-r-- 1 anthony anthony   738 фев 15 23:29 tail.txt
+-rw-rw-r-- 1 anthony anthony   457 фев 16 01:07 tee.txt
+-rw-rw-r-- 1 anthony anthony   268 фев 16 01:18 tr.txt
+-rw-rw-r-- 1 anthony anthony   389 фев 16 01:26 uniq.txt
+-rw-rw-r-- 1 anthony anthony   551 фев 15 23:56 wc.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ split -d -l 3 t2.txt ./split_t2/
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ l
+cmp.txt   filenames.txt  grep.txt   md5sum.txt   sort.txt   t1.txt  tail.txt  uniq.txt
+diff.txt  file.txt       head.txt   newFile.txt  split_t2/  t2.txt  tee.txt   wc.txt
+dir1/     find.txt       iconv.txt  sed.txt      t1.md5     t3.cpp  tr.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cd split_t2/
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20/split_t2$ ls
+00  01  02  03  04  05  06  07
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20/split_t2$ cat 00
+итого 96
+-rw-rw-r-- 1 anthony anthony  1196 фев 15 23:25 cmp.txt
+-rw-rw-r-- 1 anthony anthony  1164 фев 15 11:48 diff.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20/split_t2$ cd ..
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ rm ./split_t2/0*
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ split -d -n 2 t2.txt ./split_t2/
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cd split_t2/
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20/split_t2$ ls
+00  01
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20/split_t2$ cat 00
+итого 96
+-rw-rw-r-- 1 anthony anthony  1196 фев 15 23:25 cmp.txt
+-rw-rw-r-- 1 anthony anthony  1164 фев 15 11:48 diff.txt
+drwxrwxr-x 3 anthony anthony  4096 фев 16 00:49 dir1
+-rw-rw-r-- 1 anthony anthony    14 фев 16 15:29 filenames.txt
+-rw-rw-r-- 1 anthony anthony  1115 фев 16 15:31 file.txt
+-rw-rw-r-- 1 anthony anthony   816 фев 16 00:51 find.txt
+-rw-rw-r-- 1 anthony anthony   703 фев 16 00:30 grep.txt
+-rw-rw-r-- 1 anthony anthony   807 фев 15 23:40 head.txt
+-rw-rw-r-- 1 anthony anthony 13618 фев 16 14:53 iconv.txt
+-rw-rw-r-- 1 anthony anthony  1327 фев 16 15:18 md5sum.txt
+-rw-rw-r-- 1 anthony anthony    30 фев 16 0anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20/split_t2$ cd ..
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ rm ./split_t2/0*
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ split -d -b 30 t2.txt ./split_t2/
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cd split_t2/
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20/split_t2$ ls
+00  02  04  06  08  10  12  14  16  18  20  22  24  26  28  30  32  34  36  38  40  42  44
+01  03  05  07  09  11  13  15  17  19  21  23  25  27  29  31  33  35  37  39  41  43
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20/split_t2$ cat 00
+итого 96
+-rw-rw-r-- 1 ant

@@ -1,0 +1,27 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+qwerty
+qwerty
+qwa
+qwa
+qwo
+w
+e
+w
+w
+w
+w
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ uniq t1.txt
+qwerty
+qwa
+qwo
+w
+e
+w
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ uniq -d t1.txt
+qwerty
+qwa
+w
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ uniq -d -c t1.txt
+      2 qwerty
+      2 qwa
+      4 w

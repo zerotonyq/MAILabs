@@ -1,0 +1,22 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+qwerty
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ tee -a t1.txt
+qwertipolis
+qwertipolis
+^C
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+qwerty
+qwertipolis
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ tee -a -i t1.txt
+qwa
+qwa
+^C
+
+bla-bla
+bla-bla
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+qwerty
+qwertipolis
+qwa
+
+bla-bla

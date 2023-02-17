@@ -1,0 +1,18 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ ls
+cmp.txt        file.txt  head.txt    sed.txt    t1.txt    tr.txt
+diff.txt       find.txt  iconv.txt   sort.txt   tail.txt  uniq.txt
+filenames.txt  grep.txt  md5sum.txt  split.txt  tee.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+qwerty
+qwertypolis
+bob
+anthony
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ wc -c t1.txt
+31 t1.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ wc -c -L t1.txt
+31 11 t1.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ wc t1.txt
+ 4  4 31 t1.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ wc -w t1.txt
+4 t1.txt
+

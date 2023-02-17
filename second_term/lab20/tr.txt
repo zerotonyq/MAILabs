@@ -1,0 +1,12 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ tr -s a
+aaaaaaant
+ant
+^C
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ tr -d [:upper:]
+ANTONio
+io
+^C
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ tr -d -s [:upper:] a
+AAAaaantonio
+antonio
+^C

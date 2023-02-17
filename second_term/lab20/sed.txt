@@ -1,0 +1,53 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+2 5 10
+3 7 21
+4 20 80
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ sed -e 's/ /\*/' t1.txt
+2*5 10
+3*7 21
+4*20 80
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ sed -e 's/ /\*/' -e 's/ /\=/' t1.txt
+2*5=10
+3*7=21
+4*20=80
+
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+file1.txt
+file2.cpp
+file3.c
+file4.psd
+file4.h
+dir1
+dir2
+file5.cpp
+file6.cpp
+bla-bla.cpp
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ sed -n '/file.\.cpp/p' t1.txt
+file2.cpp
+file5.cpp
+file6.cpp
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ sed -n '/file.\.cpp/p' t1.txt | sed 'y/f/F/'
+File2.cpp
+File5.cpp
+File6.cpp
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ sed -n '/file.\.cpp/p' t1.txt | sed 'y/f/F/' > newFile.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat newFile.txt
+File2.cpp
+File5.cpp
+File6.cpp
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+file1.txt
+file2.cpp
+file3.c
+file4.psd
+file4.h
+dir1
+dir2
+file5.cpp
+file6.cpp
+bla-bla.cpp
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ sed -n -E '/[a-z]{4}[0-9]{1}\.cpp/p' t1.txt
+file2.cpp
+file5.cpp
+file6.cpp
+

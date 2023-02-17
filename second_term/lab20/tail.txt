@@ -1,0 +1,28 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+qwerty
+bob
+sunday is the day with sun
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t2.txt
+qwerty
+bob2
+sundaty is day with moon
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ tail t1.txt
+qwerty
+bob
+sunday is the day with sun
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ tail -n +2 t1.txt
+bob
+sunday is the day with sun
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ tail -n +2 t1.txt t2.txt
+==> t1.txt <==
+bob
+sunday is the day with sun
+
+==> t2.txt <==
+bob2
+sundaty is day with moon
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ tail -n +2 -q t1.txt t2.txt
+bob
+sunday is the day with sun
+bob2
+sundaty is day with moon

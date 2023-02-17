@@ -1,0 +1,16 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ ls
+cmp.txt  diff.txt  dir1  grep.txt  head.txt  t1.txt  t2.txt  t3.cpp  tail.txt  wc.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cd dir1; ls
+dir1-2  file2.txt  file.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20/dir1$ cd dir1-2; ls
+file.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20/dir1/dir1-2$ cd ../..
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ ls
+cmp.txt  diff.txt  dir1  grep.txt  head.txt  t1.txt  t2.txt  t3.cpp  tail.txt  wc.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ find ./ -maxdepth 2 -name "file*"
+./dir1/file.txt
+./dir1/file2.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ find ./ -maxdepth 3 -name "file*"
+./dir1/dir1-2/file.txt
+./dir1/file.txt
+./dir1/file2.txt

@@ -1,0 +1,46 @@
+anthony@anthony-VirtualBox:~$ cat t1.txt
+qwerty
+bob
+sunday is the day with sun
+anthony@anthony-VirtualBox:~$ cat t2.txt
+qwerty
+bob2
+sundaty is day with moon
+anthony@anthony-VirtualBox:~$ cat t3.txt
+bob
+qwerty
+sunday
+anthony@anthony-VirtualBox:~$ diff -i t1.txt t2.txt
+2,3c2,3
+< bob
+< sunday is the day with sun
+---
+> bob2
+> sundaty is day with moon
+anthony@anthony-VirtualBox:~$ diff -y -i t1.txt t2.txt
+qwerty								qwerty
+bob							      |	bob2
+sunday is the day with sun				      |	sundaty is day with moon
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ ls
+t1.txt  t2.txt  t3.cpp  utilit_1.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+qwerty
+bob
+sunday is the day with sun
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t3.cpp
+bob
+qwerty
+bobino
+sunday is the day with sun
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ diff -i -y -a t1.txt t3.cpp
+qwerty							      <
+bob								bob
+							      >	qwerty
+							      >	bobino
+sunday is the day with sun					sunday is the day with sun
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ diff -i -a t1.txt t3.cpp
+1d0
+< qwerty
+2a2,3
+> qwerty
+> bobino

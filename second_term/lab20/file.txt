@@ -1,0 +1,24 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat filenames.txt
+t1.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat t1.txt
+you know i need you
+but the life is a complex thing
+please stop and don't feed me
+i better disappear in this feeling
+new line
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ file t1.txt
+t1.txt: ASCII text
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ file -i t1.txt
+t1.txt: text/plain; charset=us-ascii
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ file -i -f filenames.txt
+t1.txt: text/plain; charset=us-ascii
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ cat >> filenames.txt
+t2.txt
+^C
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ file -i -f filenames.txt
+t1.txt: text/plain; charset=us-ascii
+t2.txt: text/plain; charset=us-ascii
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ ls
+cmp.txt   filenames.txt  head.txt    newFile.txt  t1.md5  t3.cpp    tr.txt
+diff.txt  find.txt       iconv.txt   sed.txt      t1.txt  tail.txt  uniq.txt
+dir1      grep.txt       md5sum.txt  sort.txt     t2.txt  tee.txt   wc.txt

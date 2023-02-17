@@ -1,0 +1,39 @@
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ ls -l
+итого 44
+-rw-rw-r-- 1 anthony anthony 1196 фев 15 23:25 cmp.txt
+-rw-rw-r-- 1 anthony anthony 1164 фев 15 11:48 diff.txt
+drwxrwxr-x 3 anthony anthony 4096 фев 16 00:49 dir1
+-rw-rw-r-- 1 anthony anthony  816 фев 16 00:51 find.txt
+-rw-rw-r-- 1 anthony anthony  703 фев 16 00:30 grep.txt
+-rw-rw-r-- 1 anthony anthony  807 фев 15 23:40 head.txt
+-rw-rw-r-- 1 anthony anthony   49 фев 16 00:56 t1.txt
+-rw-rw-r-- 1 anthony anthony   37 фев 15 11:24 t2.txt
+-rw-rw-r-- 1 anthony anthony   45 фев 15 11:47 t3.cpp
+-rw-rw-r-- 1 anthony anthony  738 фев 15 23:29 tail.txt
+-rw-rw-r-- 1 anthony anthony  551 фев 15 23:56 wc.txt
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ ls -l | sort -n -k5
+итого 44
+-rw-rw-r-- 1 anthony anthony   37 фев 15 11:24 t2.txt
+-rw-rw-r-- 1 anthony anthony   45 фев 15 11:47 t3.cpp
+-rw-rw-r-- 1 anthony anthony   49 фев 16 00:56 t1.txt
+-rw-rw-r-- 1 anthony anthony  551 фев 15 23:56 wc.txt
+-rw-rw-r-- 1 anthony anthony  703 фев 16 00:30 grep.txt
+-rw-rw-r-- 1 anthony anthony  738 фев 15 23:29 tail.txt
+-rw-rw-r-- 1 anthony anthony  807 фев 15 23:40 head.txt
+-rw-rw-r-- 1 anthony anthony  816 фев 16 00:51 find.txt
+-rw-rw-r-- 1 anthony anthony 1164 фев 15 11:48 diff.txt
+-rw-rw-r-- 1 anthony anthony 1196 фев 15 23:25 cmp.txt
+drwxrwxr-x 3 anthony anthony 4096 фев 16 00:49 dir1
+anthony@anthony-VirtualBox:~/MAILabs/second_term/lab20$ ls -l | sort -n -k5 -r
+drwxrwxr-x 3 anthony anthony 4096 фев 16 00:49 dir1
+-rw-rw-r-- 1 anthony anthony 1196 фев 15 23:25 cmp.txt
+-rw-rw-r-- 1 anthony anthony 1164 фев 15 11:48 diff.txt
+-rw-rw-r-- 1 anthony anthony  816 фев 16 00:51 find.txt
+-rw-rw-r-- 1 anthony anthony  807 фев 15 23:40 head.txt
+-rw-rw-r-- 1 anthony anthony  738 фев 15 23:29 tail.txt
+-rw-rw-r-- 1 anthony anthony  703 фев 16 00:30 grep.txt
+-rw-rw-r-- 1 anthony anthony  551 фев 15 23:56 wc.txt
+-rw-rw-r-- 1 anthony anthony   49 фев 16 00:56 t1.txt
+-rw-rw-r-- 1 anthony anthony   45 фев 15 11:47 t3.cpp
+-rw-rw-r-- 1 anthony anthony   37 фев 15 11:24 t2.txt
+итого 44
